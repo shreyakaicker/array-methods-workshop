@@ -93,3 +93,24 @@ function longestWord(string1) {
 
 console.log(longestWord("My name is ShreyaKaicker"));
 
+
+/*Write a function called countVowels that takes a string and returns 
+the number of vowels in the string.*/
+
+var vowels = ['a','e','i','o','u'];
+
+function countVowels(stringA) {
+    
+    var singleLetters = stringA.split('') ;
+    return singleLetters.reduce( function(counter, char) {
+         if (vowels.indexOf(char) > -1) {
+             counter = counter + 1;
+         }
+         return counter;
+     }, 0);
+    
+    
+    
+}
+
+console.log(countVowels("axxxx ettt ikkkk ojjjj ummmm"))
