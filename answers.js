@@ -73,3 +73,23 @@ array.filter(function(num) { if(num > 0){return true;}}).forEach(function(item) 
           return false;
       }
   })
+  
+  
+  
+ /* Exercise 4
+
+Write a function called longestWord that takes a string as argument, 
+and returns the longest word in the string. You should use 
+Array.prototype.reduce to do your work.*/
+
+
+function longestWord(string1) {
+    var str = string1.split(" ");
+      return str.reduce(function(initWord,nextWord){
+          if(initWord.length > nextWord.length){return initWord}
+          else {return nextWord}
+      })
+}
+
+console.log(longestWord("My name is ShreyaKaicker"));
+
