@@ -93,7 +93,7 @@ function longestWord(string1) {
 
 console.log(longestWord("My name is ShreyaKaicker"));
 
-
+k
 /*Write a function called countVowels that takes a string and returns 
 the number of vowels in the string.*/
 
@@ -114,3 +114,28 @@ function countVowels(stringA) {
 }
 
 console.log(countVowels("axxxx ettt ikkkk ojjjj ummmm"))
+
+/*Exercise 6
+
+Write a function called highLow that takes an array of numbers,
+and returns an object with a property highest containing the highest 
+number, and a property lowest containing the lowest number, 
+using Array.prototype.reduce.*/
+
+
+
+function highLow(arrayX) {
+   var object1 = arrayX.reduce(function(a,b) {
+    
+    if (a.highest < b) {
+         a.highest = b ; 
+    } 
+    else if (a.lowest > b) {
+        a.lowest = b ;
+    }
+    return a ;
+   } , {highest: -Infinity, lowest: Infinity}) ;
+return object1
+} ;
+
+console.log(highLow([1,2,3,4,-5,-9]))
